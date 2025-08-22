@@ -128,3 +128,6 @@ export const NodePalette: React.FC<NodePaletteProps> = ({
     </div>
   );
 };
+
+
+// test 
