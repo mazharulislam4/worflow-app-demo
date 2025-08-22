@@ -10,7 +10,7 @@ export default function ChatLayout({
     <div className="mx-auto p-4">
       <div className="flex h-[calc(100vh-6rem)] gap-3">
         <ChatSidebar />
-        <main className="min-w-0 flex-1 rounded-2xl border border-slate-200 bg-white/80 backdrop-blur shadow-sm">
+        <main className="min-w-0 flex-1 rounded-2xl border border-slate-200 bg-background backdrop-blur shadow-sm">
           {children}
         </main>
       </div>

@@ -87,7 +87,7 @@ export const NodePalette: React.FC<NodePaletteProps> = ({
   }, []);
 
   return (
-    <div className="w-full h-full bg-white border-r border-gray-200 flex flex-col">
+    <div className="w-full h-full bg-background border-r border-gray-200 flex flex-col">
       {/* Header */}
       <div className="p-4 border-b border-gray-200">
         <h3 className="font-semibold text-gray-900">Node Types</h3>

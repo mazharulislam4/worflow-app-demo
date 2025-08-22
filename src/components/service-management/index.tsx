@@ -12,7 +12,7 @@ const ServiceManagementComponents = () => {
   const [isAddServiceOpen, setIsAddServiceOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-4">
+    <div className="min-h-screen bg-background px-6 py-4">
       <div className="flex justify-between items-center mb-6">
         <div>
           <h1 className="text-3xl font-semibold">IT Service Management</h1>

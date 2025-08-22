@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const ChatSidebar = () => {
   const chats = [
     { id: "1", title: "Welcome to AI", last: "Start a conversation…" },
@@ -24,11 +26,11 @@ export const ChatSidebar = () => {
   ];
 
   return (
-    <aside className="hidden md:flex w-[300px] shrink-0 flex-col rounded-2xl border border-slate-200 bg-white/80 backdrop-blur shadow-sm">
+    <aside className="hidden md:flex w-[300px] shrink-0 flex-col rounded-2xl border border-slate-200 bg-card backdrop-blur shadow-sm">
       <div className="flex items-center justify-between gap-2 border-b border-slate-200 px-3 py-3">
         <div className="flex items-center gap-2">
           <svg
-            className="h-5 w-5 text-purple-600"
+            className="h-5 w-5 text-white"
             viewBox="0 0 24 24"
             fill="none"
           >
@@ -37,11 +39,11 @@ export const ChatSidebar = () => {
               fill="currentColor"
             />
           </svg>
-          <div className="text-sm font-semibold tracking-tight">AI</div>
+          <div className="text-sm font-semibold text-white tracking-tight uppercase">Nora</div>
         </div>
-        <a
+        <Link
           href="/chat"
-          className="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-3 py-1.5 text-xs font-medium text-white shadow hover:bg-purple-700 transition-colors"
+          className="action-button-contained flex items-center gap-1"
         >
           <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
             <path
@@ -51,18 +53,18 @@ export const ChatSidebar = () => {
             />
           </svg>
           New
-        </a>
+        </Link>
       </div>
 
       <div className="m-2 mb-3 space-y-2 overflow-y-auto">
         {chats.map((chat) => (
-          <a
+          <Link
             key={chat.id}
             href={`/chat/${chat.id}`}
             className="group block cursor-pointer rounded-xl border border-transparent px-3 py-2 transition-colors hover:border-slate-200 hover:bg-slate-50"
           >
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-purple-100 text-purple-700">
+              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-background text-featured-text">
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M20 4H4a2 2 0 00-2 2v10a2 2 0 002 2h3.5l3.6 2.7c.8.6 1.9 0 1.9-.9V18H20a2 2 0 002-2V6a2 2 0 00-2-2z"
@@ -72,13 +74,13 @@ export const ChatSidebar = () => {
                 </svg>
               </div>
               <div className="min-w-0 flex-1">
-                <div className="truncate text-sm font-medium">{chat.title}</div>
-                <div className="truncate text-xs text-slate-500">
+                <div className="truncate text-sm font-medium text-white group-hover:text-black">{chat.title}</div>
+                <div className="truncate text-xs text-gray-300 group-hover:text-gray-600">
                   {chat.last}
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </aside>

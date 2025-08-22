@@ -3,12 +3,12 @@ import { WelcomeForm } from "@/components/chat/welcome";
 export default function ChatPage() {
   return (
     <section className="flex h-full flex-col">
-      <div className="flex-1 flex items-center justify-center">
-        <div className="text-center max-w-xl">
+      <div className="flex-1 px-8 py-3">
+        <div className="text-center">
           <div className="flex items-center justify-center mb-6">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-100 to-indigo-100 flex items-center justify-center shadow-lg">
+            <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-lg">
               <svg
-                className="h-10 w-10 text-purple-600"
+                className="h-10 w-10 text-featured-text"
                 viewBox="0 0 24 24"
                 fill="none"
               >
@@ -19,9 +19,9 @@ export default function ChatPage() {
               </svg>
             </div>
           </div>
-          <h2 className="text-3xl font-bold text-slate-800 mb-3">Hello! 👋</h2>
+          <h2 className="text-3xl font-bold mb-3">Hello! 👋</h2>
           <p className="text-slate-600 mb-8 text-lg">
-            I'm AI, your intelligent assistant. How can I help you today?
+            I'm NORA, your intelligent assistant. How can I help you today?
           </p>
 
           <WelcomeForm />

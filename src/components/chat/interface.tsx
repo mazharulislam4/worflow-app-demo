@@ -87,7 +87,7 @@ export function ChatInterface({ chatId }: ChatInterfaceProps) {
             <div
               className={`${
                 m.role === "user"
-                  ? "bg-purple-600 text-white"
+                  ? "bg-featured-text text-white"
                   : "bg-slate-100 text-slate-800"
               } rounded-2xl px-4 py-2 max-w-[70%] text-sm whitespace-pre-wrap`}
             >
@@ -115,7 +115,7 @@ export function ChatInterface({ chatId }: ChatInterfaceProps) {
       </div>
 
       <div className="border-t border-slate-200 p-3">
-        <form onSubmit={handleSubmit} className="flex gap-2 max-w-3xl mx-auto">
+        <form onSubmit={handleSubmit} className="flex gap-2 mx-auto border-2 border-border rounded-xl bg-white p-1">
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -127,12 +127,12 @@ export function ChatInterface({ chatId }: ChatInterfaceProps) {
             }}
             placeholder="Type a message…"
             rows={1}
-            className="flex-1 resize-none rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-purple-400/50"
+            className="flex-1 resize-none px-3 py-2 text-sm outline-none"
           />
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
-            className="rounded-xl bg-purple-600 px-3 py-2 text-sm font-medium text-white shadow hover:bg-purple-700 disabled:opacity-50"
+            className="rounded-xl bg-border px-3 py-2 text-sm font-medium text-white shadow disabled:opacity-50"
           >
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
               <path

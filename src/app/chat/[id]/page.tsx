@@ -1,13 +1,18 @@
 import { ChatInterface } from "@/components/chat/interface";
 
-export default function ChatByIdPage({ params }: { params: { id: string } }) {
+export default async function ChatByIdPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const { id } = await params;
   return (
     <section className="flex h-full flex-col">
       <header className="border-b border-slate-200 px-4 py-3 bg-white/80">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+          <div className="w-6 h-6 rounded-full bg-background flex items-center justify-center">
             <svg
-              className="h-3 w-3 text-purple-600"
+              className="h-3 w-3 text-featured-text"
               viewBox="0 0 24 24"
               fill="none"
             >
@@ -17,11 +22,11 @@ export default function ChatByIdPage({ params }: { params: { id: string } }) {
               />
             </svg>
           </div>
-          <h1 className="font-semibold text-sm">AI Chat</h1>
+          <h1 className="font-semibold text-sm uppercase">Nora</h1>
         </div>
       </header>
 
-      <ChatInterface chatId={params.id} />
+      <ChatInterface chatId={id} />
     </section>
   );
 }

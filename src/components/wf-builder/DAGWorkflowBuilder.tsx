@@ -250,7 +250,7 @@ export const DAGWorkflowBuilder: React.FC = () => {
 
   return (
     <ReactFlowProvider>
-      <div className="flex flex-col h-screen bg-gray-100">
+      <div className="flex flex-col h-screen bg-background">
         {/* Hidden file input for import */}
         <input
           ref={fileInputRef}

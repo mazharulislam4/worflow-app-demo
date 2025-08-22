@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ReduxProvider>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-background">
             {/* Navigation Header */}
             <nav className="bg-blue-600 shadow-sm border-b border-blue-700">
               <div className="max-w-7xl mx-auto px-4">

@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
-
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #d3dff7;
   --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card: #3b4b6b;
+  --card-foreground: oklch(11.492% 0.00001 271.152);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -23,7 +22,7 @@
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
+  --border: #ff671d;
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -40,12 +39,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --featured-text: #1f4798;
 }
 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
+  --card: #3b4b6b;
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
@@ -102,6 +102,7 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-featured-text: var(--featured-text);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -123,4 +124,21 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+main {
+  @apply bg-background;
+}
+
+.action-button-contained {
+  padding: 7px 12px !important;
+  border: none !important;
+  font-weight: 700 !important;
+  border-radius: 5px !important;
+  background-color: #ff671d !important;
+  color: white !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s !important;
+  font-size: 12px !important;
+  text-transform: capitalize !important;
 }

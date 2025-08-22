@@ -8,7 +8,7 @@ interface PropsType {
 
 const Tabs = ({ data, activeTab, setActiveTab }: PropsType) => {
   return (
-    <nav className="mb-6 flex gap-6 border-b">
+    <nav className="mb-6 flex gap-6 border-b border-gray-100">
       {data.map((t) => (
         <button
           key={t}
